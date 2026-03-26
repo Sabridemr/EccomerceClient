@@ -3,6 +3,9 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
+import { AdminModule } from './admin/admin-module';
+import { UiModule } from './ui/ui-module';
+import { ComponentsModule } from "./admin/layout/components/components-module";
 
 @NgModule({
   declarations: [
@@ -10,8 +13,10 @@ import { App } from './app';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
-  ],
+    AppRoutingModule,
+    AdminModule, UiModule,
+    ComponentsModule
+],
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideClientHydration(withEventReplay())
