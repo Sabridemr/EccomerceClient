@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import e from 'express';
+import { Base, SpinnerType } from '../../../base/base';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-products',
@@ -6,6 +9,12 @@ import { Component } from '@angular/core';
   templateUrl: './products.html',
   styleUrl: './products.css',
 })
-export class Products {
+export class Products extends Base {
+  constructor(spinner: NgxSpinnerService) {
+    super(spinner);
+  }
+  ngOnInit(): void {
+    this.showSpinner(SpinnerType.BallSpinClockwiseFadeRotating);
+  }
 
 }

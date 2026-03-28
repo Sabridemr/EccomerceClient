@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-layout',
@@ -7,5 +8,4 @@ import { Component } from '@angular/core';
   styleUrl: './layout.css',
 })
 export class Layout {
-
 }
