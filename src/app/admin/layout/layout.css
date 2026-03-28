@@ -1,0 +1,13 @@
+.admin-container {
+  width: 99%;
+  height: 900px;
+  margin: 10px;
+  border: 1px solid #777070;
+  /* The background property is added to clearly distinguish the borders between drawer and main
+     content */
+  background: #eee;
+}
+
+.admin-container .admin-left {
+  width: 150px;
+}

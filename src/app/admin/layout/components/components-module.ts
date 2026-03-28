@@ -4,6 +4,7 @@ import { Header } from './header/header';
 import { Sidebar } from './sidebar/sidebar';
 import { Footer } from './footer/footer';
 import { AppRoutingModule } from "../../../app-routing-module";
+import {MatListModule} from '@angular/material/list';
 
 
 
@@ -15,7 +16,8 @@ import { AppRoutingModule } from "../../../app-routing-module";
   ],
   imports: [
     CommonModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatListModule
 ],
   exports: [
     Header,

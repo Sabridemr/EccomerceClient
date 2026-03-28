@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Layout } from './layout';
 import { ComponentsModule } from './components/components-module';
 import { AppRoutingModule } from "../../app-routing-module";
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 
 
@@ -13,7 +14,8 @@ import { AppRoutingModule } from "../../app-routing-module";
   imports: [
     CommonModule,
     ComponentsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatSidenavModule
 ],
   exports: [
     Layout,

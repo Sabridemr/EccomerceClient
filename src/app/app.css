@@ -1,0 +1,23 @@
+@import "@angular/material/prebuilt-themes/indigo-pink.css";
+
+/* Küçük ekranda navbar collapse kontrolü */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    display: none !important;
+  }
+  .navbar-collapse.show {
+    display: block !important;
+  }
+}
+
+/* Büyük ekranda navbar her zaman görünür, toggler gizli */
+@media (min-width: 992px) {
+  .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+    align-items: center;
+  }
+  .navbar-toggler {
+    display: none !important;
+  }
+}

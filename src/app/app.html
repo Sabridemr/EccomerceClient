@@ -1,5 +1,32 @@
-<a routerLink=""H>Home</a> | <a routerLink="products">Products</a> | <a routerLink="baskets">Basket</a> |  <a routerLink="admin">Admin</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="">Mini E-Ticaret</a>
+    <button class="navbar-toggler" type="button" (click)="toggleNav()" [attr.aria-expanded]="navOpen" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse" [class.show]="navOpen" id="navbarMain">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="navOpen = false">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="products" routerLinkActive="active" (click)="navOpen = false">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="baskets" routerLinkActive="active" (click)="navOpen = false">Basket</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="admin" routerLinkActive="active" (click)="navOpen = false">Admin</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-light" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
 
-<br>
-
-<router-outlet></router-outlet>
+<div class="container mt-4">
+  <router-outlet></router-outlet>
+</div>
